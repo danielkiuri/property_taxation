@@ -44,6 +44,7 @@ class ParcelInfo(models.Model):
     arrears = models.CharField(max_length=100, blank=True, null=True)
     is_cleared = models.BooleanField("Arrears Cleared", default=False)
     id_number = models.BigIntegerField("Owner Id Number", unique=False)
+    phone_number = models.CharField(db_column='phone number', max_length=10)
 
     class Meta:
         managed = False
